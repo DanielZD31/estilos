@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <link rel="stylesheet" href="lampada.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    
+    <input type="checkbox" id="interruptor" class="switch">
+    <div class="lamp">
+        <div class="light"></div>
+    </div>
+
+    <script>
+        // Adicionando um event listener para o clique com o botão esquerdo do mouse na lâmpada
+        document.querySelector(".lamp").addEventListener("click", function(event) {
+            // Verifica se o botão clicado foi o botão esquerdo (código 0)
+            if (event.button === 0) {
+                // Alterna o estado do interruptor
+                document.getElementById("interruptor").checked = !document.getElementById("interruptor").checked;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Importa a fonte Quicksand do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+/* Estilos para o corpo da página */
+body {
+    height: 100vh; /* Define a altura como 100% da viewport */
+    margin: 0; /* Remove as margens */
+    display: grid; /* Usa o layout de grid */
+    place-items: center; /* Centraliza os elementos vertical e horizontalmente */
+    background: #111; /* Define a cor de fundo */
+    font-size: 1.3em; /* Define o tamanho da fonte */
+}
+
+/* Estilos para cabeçalhos, inputs e links */
+h2, input, a {
+    color: #fff; /* Define a cor do texto */
+}
+
+/* Estilos para o contêiner principal */
+.wrapper {
+    position: relative; /* Define a posição como relativa */
+    width: 550px; /* Define a largura */
+    height: 550px; /* Define a altura */
+    display: grid; /* Usa o layout de grid */
+    place-items: center; /* Centraliza os elementos vertical e horizontalmente */
+    font-family: "Quicksand", sans-serif; /* Define a fonte */
+}
+
+/* Estilos para os ícones dentro do contêiner */
+.wrapper i {
+    position: absolute; /* Define a posição como absoluta */
+    inset: 0; /* Define as bordas */
+    border: 2px solid #fff; /* Adiciona uma borda */
+    transition: 0.5s; /* Adiciona uma transição suave */
+
+    /* Estilos específicos para diferentes ícones */
+    &:nth-child(1) {
+        border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%; /* Define um formato específico para o primeiro ícone */
+        animation: anim 6s linear infinite; /* Adiciona uma animação específica */
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+        border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%; /* Define um formato específico para os ícones 2 e 3 */
+    }
+
+    &:nth-child(2) {
+        animation: anim 4s linear infinite; /* Adiciona uma animação específica para o segundo ícone */
+    }
+
+    &:nth-child(3) {
+        animation: anim2 10s linear infinite; /* Adiciona uma animação específica para o terceiro ícone */
+    }
+}
+
+/* Estilos de hover para os ícones */
+.wrapper:hover i {
+    border: 6px solid var(--clr); /* Altera a borda ao passar o mouse */
+    filter: drop-shadow(0 0 20px var(--clr)); /* Adiciona uma sombra ao passar o mouse */
+}
+
+/* Keyframes para animações dos ícones */
+@keyframes anim {
+    0% {
+        transform: rotate(0deg); /* Rotação inicial */
+    }
+
+    100% {
+        transform: rotate(360deg); /* Rotação completa */
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        transform: rotate(360deg); /* Rotação inicial */
+    }
+
+    100% {
+        transform: rotate(0deg); /* Rotação completa */
+    }
+}
+
+/* Estilos para o formulário de login */
+.login {
+    width: 350px; /* Define a largura */
+    height: 100%; /* Define a altura */
+    display: flex; /* Usa o layout flexível */
+    flex-direction: column; /* Define a direção do layout como coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre elementos */
+    z-index: 2; /* Define a ordem de empilhamento */
+}
+
+/* Estilos para o título do formulário */
+h2 {
+    font-size: 2em; /* Define o tamanho da fonte */
+    margin: 0; /* Remove as margens */
+}
+
+/* Estilos para os campos de entrada */
+input {
+    width: 100%; /* Define a largura */
+    border: 2px solid #fff; /* Adiciona uma borda */
+    border-radius: 40px; /* Define um raio para a borda */
+    padding: 12px 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Define o modelo de caixa */
+    background: transparent; /* Define o fundo como transparente */
+    font-size: 1.2em; /* Define o tamanho da fonte */
+    box-shadow: none; /* Remove a sombra */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+/* Estilos para o botão de envio do formulário */
+input[type="submit"] {
+    width: 100%; /* Define a largura */
+    background: linear-gradient(45deg, #27005D, #D67BFF); /* Define um gradiente de cor de fundo */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+}
+
+/* Estilos para o placeholder dos campos de entrada */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.75); /* Define a cor do placeholder */
+}
+
+/* Estilos para o contêiner dos links adicionais */
+.links {
+    width: 100%; /* Define a largura */
+    display: flex; /* Usa o layout flexível */
+    flex-direction: column; /* Define a direção do layout como coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaçamento entre elementos */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Define o modelo de caixa */
+}
+
+/* Estilos para o primeiro link dentro do contêiner de links */
+.links a:first-child {
+    margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+/* Estilos para os links */
+a {
+    text-decoration: none; /* Remove a decoração de texto */
+}

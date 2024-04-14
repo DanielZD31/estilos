@@ -1,0 +1,37 @@
+@import url('https://use.fontawesome.com/releases/v6.4.2/css/all.css'); /* Importa a biblioteca Font Awesome para os ícones */
+
+body {
+    margin: 0; /* Remove as margens padrão do corpo da página */
+    display: flex; /* Define o layout do corpo da página como flexível */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    height: 100vh; /* Define a altura do corpo da página como 100% da altura da viewport */
+    background-color: black; /* Define a cor de fundo do corpo da página como preto */
+}
+
+.codetheworld-io {
+    display: flex; /* Define o layout do contêiner dos ícones como flexível */
+}
+
+a {
+    margin: 0 10px; /* Define margens para os links */
+    border-radius: 50%; /* Define a borda dos links como circular */
+    box-sizing: border-box; /* Inclui a borda no cálculo da largura e altura */
+    width: 100px; /* Define a largura dos links */
+    height: 100px; /* Define a altura dos links */
+    display: flex; /* Define o layout dos links como flexível */
+    justify-content: center; /* Alinha o conteúdo dos links horizontalmente ao centro */
+    align-items: center; /* Alinha o conteúdo dos links verticalmente ao centro */
+    text-decoration: none; /* Remove a decoração de texto dos links */
+    transition: 0.5s; /* Adiciona uma transição suave */
+    background: rgba(0, 0, 0, 0); /* Define o fundo dos links como transparente */
+    color: var(--color); /* Define a cor do texto dos links usando uma variável */
+    font-size: 2.5em; /* Define o tamanho da fonte dos links */
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)); /* Adiciona reflexo abaixo dos links */
+}
+
+a:hover {
+    background: var(--color); /* Define a cor de fundo dos links ao passar o mouse */
+    color: #050801; /* Define a cor do texto dos links ao passar o mouse */
+    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color), 0 0 200px var(--color); /* Adiciona uma sombra ao passar o mouse nos links */
+}

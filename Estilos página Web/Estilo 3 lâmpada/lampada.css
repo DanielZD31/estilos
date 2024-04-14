@@ -1,0 +1,78 @@
+/* Estilos para o corpo da página */
+body {
+    background-color: #61677A; /* Define a cor de fundo da página como preto */
+}
+
+/* Estilos para a lâmpada */
+.lamp {
+    position: relative; /* Define a posição relativa para a lâmpada */
+    margin: 0 auto; /* Centraliza a lâmpada horizontalmente */
+    width: 0.7rem; /* Define a largura da lâmpada */
+    height: 10rem; /* Define a altura da lâmpada */
+    background-image: 
+        linear-gradient(#000000b3, #000000b3), /* Gradiente vertical escuro para representar a sombra na lâmpada */
+        linear-gradient(#000000b3, #000000b3), /* Gradiente vertical escuro para representar a sombra na lâmpada */
+        linear-gradient(#000000b3, #000000b3); /* Gradiente vertical escuro para representar a sombra na lâmpada */
+    background-repeat: no-repeat; /* Não repete o fundo */
+    background-size: 
+        0.15rem 8rem, /* Tamanho do gradiente para a sombra na lâmpada */
+        0.4rem 0.8rem, /* Tamanho do gradiente para a base da lâmpada */
+        0.7rem 2rem; /* Tamanho do gradiente para a luz da lâmpada */
+    background-position: 
+        50% 0, /* Posição do gradiente da sombra na lâmpada */
+        0.14rem 8rem, /* Posição do gradiente da base da lâmpada */
+        0 8.8rem; /* Posição do gradiente da luz da lâmpada */
+}
+
+.lamp::before,
+.lamp::after {
+    content: ""; /* Adiciona um conteúdo vazio */
+    position: absolute; /* Define a posição absoluta para os pseudo-elementos */
+}
+
+.lamp::before {
+    left: -1.65rem; /* Define a posição esquerda do pseudo-elemento para simular o reflexo */
+    bottom: -4rem; /* Define a posição inferior do pseudo-elemento para simular o reflexo */
+    width: 4rem; /* Define a largura do pseudo-elemento para simular o reflexo */
+    height: 4rem; /* Define a altura do pseudo-elemento para simular o reflexo */
+    border-radius: 50%; /* Aplica um raio de borda para torná-lo circular */
+    background: #ffffff08; /* Define a cor de fundo do pseudo-elemento para simular o reflexo */
+    box-shadow: inset 2px -2px 10px #ffffff12; /* Adiciona um efeito de sombra interna para simular o reflexo */
+    transition: all 0.75s; /* Adiciona uma transição suave para todas as mudanças */
+}
+
+.light {
+    position: absolute; /* Define a posição absoluta para a luz */
+    top: 10.05rem; /* Define a posição superior da luz */
+    left: 0.3rem; /* Define a posição esquerda da luz */
+    width: 0.6rem; /* Define a largura da luz para representar a lâmpada acesa */
+    height: 1.5rem; /* Define a altura da luz para representar a lâmpada acesa */
+    background-color: #ffffff0d; /* Define a cor da luz quando a lâmpada está ativada */
+    transition: all 0.75s; /* Adiciona uma transição suave para todas as mudanças */
+}
+
+.light::before {
+    content: ""; /* Adiciona um conteúdo vazio */
+    top: 1.5rem; /* Define a posição superior do pseudo-elemento */
+    left: -0.55rem; /* Define a posição esquerda do pseudo-elemento */
+    width: 0.9rem; /* Define a largura do pseudo-elemento */
+    height: 0.9rem; /* Define a altura do pseudo-elemento */
+    border-radius: 50%; /* Aplica um raio de borda para torná-lo circular */
+    border: 0.2rem solid #ffffff0d; /* Define a borda do pseudo-elemento para simular a lâmpada acesa */
+    box-shadow: 0px 0px 50px #ffffff00; /* Adiciona um efeito de sombra para simular a lâmpada acesa */
+}
+
+/* Estilos para o interruptor */
+.switch {
+    display: none; /* Oculta o interruptor padrão */
+}
+
+/* Estilos para a lâmpada quando o interruptor está ativado */
+.switch:checked + .lamp .light {
+    background-color: #ffcc00; /* Define a cor da luz quando a lâmpada está ativada */
+}
+
+/* Estilos para a luz ao redor da lâmpada quando o interruptor está ativado */
+.switch:checked + .lamp::before {
+    background: #ffcc00; /* Define a cor da luz ao redor da lâmpada quando ativada */
+}
